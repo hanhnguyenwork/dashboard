@@ -8,7 +8,7 @@ st.title("Claim Reimbursement")
 
 uploaded_file = st.file_uploader("Chọn tệp Excel để tải lên", type="xlsx")
 if uploaded_file is not None:
-    df = pd.read_excel(uploaded_file)
+    df1 = pd.read_excel(uploaded_file)
 
 # else:
 #     os.chdir(r"C:\Users\AEPAC\Desktop\Streamlit")
