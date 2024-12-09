@@ -6,13 +6,9 @@ import streamlit as st
 st.set_page_config(page_title="Claim Reimbursement", page_icon = ":bar_chart:", layout = "wide")
 st.title("Claim Reimbursement")
 
-path = 'C:/Users/Admin/Downloads/auto_report'
-
-fl = st.file_uploader(":file_folder: Upload a file",type=(["csv","txt","xlsx","xls"]))
-if fl is not None:
-    filename = fl.name
-    st.write(filename)
-    df1 = pd.read_excel(path + '/' + filename)
+uploaded_file = st.file_uploader("Chọn tệp Excel để tải lên", type="xlsx")
+if uploaded_file is not None:
+    df = pd.read_excel(uploaded_file)
 
 # else:
 #     os.chdir(r"C:\Users\AEPAC\Desktop\Streamlit")
